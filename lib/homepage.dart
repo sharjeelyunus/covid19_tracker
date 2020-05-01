@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   List countryData;
   fetchCountryData() async {
     http.Response response =
-        await http.get('https://corona.lmao.ninja/v2/countries');
+        await http.get('https://corona.lmao.ninja/v2/countries?sort=cases');
     setState(() {
       countryData = json.decode(response.body);
     });
