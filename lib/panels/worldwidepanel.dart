@@ -14,7 +14,7 @@ class WorldwidePanel extends StatelessWidget {
             crossAxisCount: 2, childAspectRatio: 2),
         children: <Widget>[
           StatusPanel(
-            title: 'CONFIRMED',
+            title: 'INFECTED',
             panelColor: Colors.red[100],
             textColor: Colors.red,
             count: worldData['cases'].toString(),

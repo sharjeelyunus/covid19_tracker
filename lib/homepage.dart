@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:covid19tracker/datasource.dart';
+import 'package:covid19tracker/panels/infoPanel.dart';
 import 'package:covid19tracker/panels/mosteffectedcountries.dart';
 import 'package:covid19tracker/panels/worldwidepanel.dart';
 import 'package:flutter/cupertino.dart';
@@ -108,6 +109,19 @@ class _HomePageState extends State<HomePage> {
               : MostAffectedPanel(
                   countryData: countryData,
                 ),
+          InfoPanel(),
+          SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: Text(
+              'WE ARE TOGETHER IN THE FIGHT',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+          ),
+          SizedBox(
+            height: 50,
+          ),
         ],
       )),
     );

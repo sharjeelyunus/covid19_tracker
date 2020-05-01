@@ -10,6 +10,7 @@ class MostAffectedPanel extends StatelessWidget {
     return Container(
       child: ListView.builder(
         shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return Container(
             margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
