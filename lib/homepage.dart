@@ -9,6 +9,7 @@ import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:pie_chart/pie_chart.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -124,6 +125,20 @@ class _HomePageState extends State<HomePage> {
                 : WorldwidePanel(
                     worldData: worldData,
                   ),
+            PieChart(
+              dataMap: {
+                'Infected': worldData['cases'].toDouble(),
+                'Active': worldData['active'].toDouble(),
+                'Recovered': worldData['recovered'].toDouble(),
+                'Deaths': worldData['deaths'].toDouble(),
+              },
+              colorList: [
+                Colors.red,
+                Colors.blue,
+                Colors.green,
+                Colors.grey,
+              ],
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
