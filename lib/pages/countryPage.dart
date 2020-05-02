@@ -38,17 +38,13 @@ class _CountryPageState extends State<CountryPage> {
                 return Container(
                   height: 130,
                   margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                  decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[100],
-                        blurRadius: 10,
-                        offset: Offset(0, 10)),
-                  ]),
                   child: Row(
                     children: <Widget>[
                       Container(
+                        width: 200,
                         margin: EdgeInsets.symmetric(horizontal: 10),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
@@ -69,32 +65,32 @@ class _CountryPageState extends State<CountryPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              'INFECTED:' +
+                              'INFECTED: ' +
                                   countryData[index]['cases'].toString(),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.red),
                             ),
                             Text(
-                              'ACTIVE:' +
+                              'ACTIVE: ' +
                                   countryData[index]['active'].toString(),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.blue),
                             ),
                             Text(
-                              'RECOVERED:' +
+                              'RECOVERED: ' +
                                   countryData[index]['recovered'].toString(),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.green),
                             ),
                             Text(
-                              'DEATHS:' +
+                              'DEATHS: ' +
                                   countryData[index]['deaths'].toString(),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.grey[800]),
+                                  color: Colors.grey[600]),
                             ),
                           ],
                         ),
