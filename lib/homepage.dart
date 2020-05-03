@@ -130,20 +130,22 @@ class _HomePageState extends State<HomePage> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: PieChart(
-                dataMap: {
-                  'Infected': worldData['cases'].toDouble(),
-                  'Active': worldData['active'].toDouble(),
-                  'Recovered': worldData['recovered'].toDouble(),
-                  'Deaths': worldData['deaths'].toDouble(),
-                },
-                colorList: [
-                  Colors.red,
-                  Colors.blue,
-                  Colors.green,
-                  Colors.grey,
-                ],
-              ),
+              child: worldData == null
+                  ? Container()
+                  : PieChart(
+                      dataMap: {
+                        'Infected': worldData['cases'].toDouble(),
+                        'Active': worldData['active'].toDouble(),
+                        'Recovered': worldData['recovered'].toDouble(),
+                        'Deaths': worldData['deaths'].toDouble(),
+                      },
+                      colorList: [
+                        Colors.red,
+                        Colors.blue,
+                        Colors.green,
+                        Colors.grey,
+                      ],
+                    ),
             ),
             SizedBox(
               height: 10,
