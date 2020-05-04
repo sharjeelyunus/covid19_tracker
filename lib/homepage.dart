@@ -134,13 +134,13 @@ class _HomePageState extends State<HomePage> {
                   ? Container()
                   : PieChart(
                       dataMap: {
-                        'Infected': worldData['cases'].toDouble(),
+//                        'Infected': worldData['cases'].toDouble(),
                         'Active': worldData['active'].toDouble(),
                         'Recovered': worldData['recovered'].toDouble(),
                         'Deaths': worldData['deaths'].toDouble(),
                       },
                       colorList: [
-                        Colors.red,
+//                        Colors.red,
                         Colors.blue,
                         Colors.green,
                         Colors.grey,
